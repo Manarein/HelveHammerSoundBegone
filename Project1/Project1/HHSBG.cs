@@ -1,22 +1,22 @@
 ﻿using HarmonyLib;
 using System;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Xml.Linq;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
-using Vintagestory.API.Config;
-using Vintagestory.API.Server;
 using Vintagestory.Client.NoObf;
-using Vintagestory.GameContent.Mechanics;
 
 namespace Project1
 {
     public class HHSBG : ModSystem
     {
-
+        /*public void cheese(string thing)
+        {
+            Mod.Logger.Chat(thing);
+        }
+        static HHSBG nomnom;*/
+       
         public override void StartClientSide(ICoreClientAPI api)
         {
+            //nomnom = this;
             try
             {
                 var harmony = new Harmony(Mod.Info.ModID);
@@ -34,8 +34,10 @@ namespace Project1
                 try
                 {
                     string name = (new System.Diagnostics.StackTrace()).GetFrame(2).GetMethod().Name;
+                    //nomnom.cheese(name);
                     if (name == "get_Angle")
                     {
+
                         return false;
                     }
                 }

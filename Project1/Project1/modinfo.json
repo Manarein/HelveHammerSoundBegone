@@ -7,10 +7,10 @@
     "Manarein"
   ],
   "description": "Removes Sound of Helve Hammer",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "side": "Client",
   "requiredOnServer": false,
   "dependencies": {
-    "game": "1.22.0-rc.1"
+    
   }
 }
